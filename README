@@ -1,0 +1,22 @@
+android_proprietary_files
+=========================
+
+How to fetch the Android proprietary files for building Android.
+
+
+For anyone who would rather get the proprietary files for your Galaxy Nexus for CM10 (or pretty much any other AOSP build) from a trusted repository instead of pulling them from your device, create a file called local_manifest.xml with the contents mentioned below and put it in your .repo/local_manifests/local_manifest.xml directory (it's in the top directory for your CM 10 source). After editing, make sure to do repo sync once again. The below example is for toro, but the only difference is changing any mention of "toro" for "maguro" or "toroplus." I will leave it to the user to do that themselves. 
+
+Example for the Galaxy Nexus (Toro):
+
+ Contents of the file you need to create if it does not exist for Toro (local_manifest.xml):
+
+See the repository file local_manifest.xml
+
+
+After creating the file with the contents, go ahead and run repo sync like normal and you're set. "The Muppets" (https://github.com/TheMuppets/) is a github repository used by many of the CM members to hold miscellaneous files mostly related to proprietary stuff on various devices. Koush used to have them on his own github, but he and others all decided to merge them there instead.
+
+NOTE: if you wish to build for something other than Android 4.2.2, replace cm-10.1 with whatever branch listed on the github link above.
+
+Directions for ToroPlus and Maguro, etc:
+
+ To use with toroplus or maguro or whatever device, just sub out any mention the word "toro" from the XML markup above you have to paste for whatever you are trying to build. Didn't feel it was necessary to paste for all three devices since that's the only difference.
